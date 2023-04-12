@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +12,7 @@ int main(int ac, char**argv)
 {
 	char *prompt = "$ ";
 	char *input;
-	char *inputCopy
+	char *inputCopy;
 	size_t n = 0;
 	ssize_t numChars;
 	const char *delim = " \n";
@@ -62,7 +63,7 @@ int main(int ac, char**argv)
 		}
 		argv[i] = NULL;
 
-		execve(argv);
+		execute(argv);
 	}
 
 	free(inputCopy);
